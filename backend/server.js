@@ -9,9 +9,7 @@ const app=express();
 
 const PORT=process.env.PORT || 5000;
 
-app.get('/',(req,res)=>{
-    res.send("Hello World");
-});
+
 
 // app.get("api/auth/signup",(req,res)=>{
 // console.log("Signup route");
@@ -26,7 +24,11 @@ app.get('/',(req,res)=>{
 // });
 
 app.use("/api/auth",authRoutes);
+app.use(express.json());//to parse requests from user body
 
+// app.get('/',(req,res)=>{
+//     res.send("Hello World");
+// });
 
 
 
