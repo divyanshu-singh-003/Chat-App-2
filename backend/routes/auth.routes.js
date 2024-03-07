@@ -34,6 +34,7 @@ router.post("/login", async(req, res) => {
 });
 
 router.post("/signup", async (req, res) => {
+    console.log("Connected to signup");
     try {
         const { fullName, username, password, confirmPassword, gender } = req.body;
 
